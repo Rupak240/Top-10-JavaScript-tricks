@@ -94,6 +94,12 @@ console.log(tech_object);
 ## 9. Object to Arrays :
 
 ```javascript
+const dynamic = "hobbies";
+const details = {
+  name: "Rupak",
+  email: "rupakdey1998@gmail.com",
+  [dynamic]: "sleeping",
+};
 const details_array_keys = Object.keys(details);
 const details_array_values = Object.values(details);
 
