@@ -192,7 +192,7 @@ console.log(
 #### FOUR : 
 ```javascript
 const arr = [11, 22, 33];
-arr.splice(1, 1);           //Deletes from the original array -- Risky
+arr.splice(1, 1);           // Deletes from the original array -- Risky
 
 arr.slice(1, 1);            // Makes a new copy of that array
 const copyArr = [...arr];   // Makes a new copy of that array
