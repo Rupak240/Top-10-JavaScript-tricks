@@ -1,4 +1,4 @@
-# 10 JavaScript Tricks:
+# TOP 10 JavaScript Tricks:
 
 ## 1. Ternary Operator:
 
@@ -151,3 +151,61 @@ console.log(`${endAt - startAt} miliseconds took to execute.`);
 ```
 
 **NOTE** : Not try to run Performance code in code editor(gives error) ... run this in browser...
+
+<br />
+<br />
+
+## Some more LIFE CHANGING JavaScript Tricks:
+---
+
+#### ONE : 
+```javascript
+console.log('Hello')
+
+console.error('Hello')
+
+console.warn('Hello')
+
+console.table({message: 'Hello')
+
+console.log('%c my message', 'color: blue')
+```
+
+#### TWO : 
+
+```javascript
+const favFood = 'burger'
+console.log({favFood})
+```
+
+#### THREE : 
+```javascript
+function getFullName({ firstName, lastName, middleName }) {
+  return `${firstName} ${middleName} ${lastName}`;
+}
+
+console.log(
+  getFullName({ firstName: "Mahendra", lastName: "DHONI", middleName: "Singh" })
+);
+```
+
+#### FOUR : 
+```javascript
+const arr = [11, 22, 33];
+arr.splice(1, 1);           //Deletes from the original array -- Risky
+
+arr.slice(1, 1);            // Makes a new copy of that array
+const copyArr = [...arr];   // Makes a new copy of that array
+console.log(copyArr);
+```
+
+#### FIVE : 
+
+```javascript
+const obj = {
+  a: 1,
+  b: 2,
+};
+const copyObj = Object.assign({}, obj);
+console.log(copyObj);
+```
