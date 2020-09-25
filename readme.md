@@ -253,7 +253,6 @@ const minEl = (arr) => {
 };
 
 console.log(minEl(arr));
-};
 ```
 
 ### 3. Second Largest Element in a Array
@@ -299,4 +298,39 @@ const secondMinEl = (arr) => {
 };
 
 console.log(secondMinEl(arr));
+```
+
+### 5. Remove Duplicate Elements in a Array
+
+```javascript
+const arr = [10, 34, 78, 769, 10, 56, 65, 34, 78];
+
+const finalArr = (arr) => {
+  arr = arr.sort();
+
+  const uniqueArr = [];
+  const duplicateArr = [];
+  let prev = arr[0];
+  uniqueArr[0] = prev;
+
+  for (let i = 1; i < arr.length; i++) {
+    let value = arr[i];
+
+    if (prev === value) {
+      duplicateArr.push(value);
+    }
+
+    if (prev !== value) {
+      uniqueArr[i] = value;
+    }
+
+    prev = value;
+  }
+  
+  console.log(duplicateArr)
+
+  return uniqueArr.filter((el) => el !== undefined);
+};
+
+console.log(finalArr(arr));
 ```
