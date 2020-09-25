@@ -216,7 +216,7 @@ console.log(copyObj);
 
 ## Array Tricks:
 
-### 1. Largest Element in a Array
+### 1. Largest Element in an Array
 
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
@@ -236,7 +236,8 @@ const maxEl = (arr) => {
 console.log(maxEl(arr));
 ```
 
-### 2. Smallest Element in a Array
+### 2. Smallest Element in an Array
+
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
 
@@ -255,7 +256,7 @@ const minEl = (arr) => {
 console.log(minEl(arr));
 ```
 
-### 3. Second Largest Element in a Array
+### 3. Second Largest Element in an Array
 
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
@@ -278,7 +279,7 @@ const secondMaxEl = (arr) => {
 console.log(secondMaxEl(arr));
 ```
 
-### 4. Second Smallest Element in a Array
+### 4. Second Smallest Element in an Array
 
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
@@ -300,7 +301,7 @@ const secondMinEl = (arr) => {
 console.log(secondMinEl(arr));
 ```
 
-### 5. Remove Duplicate Elements in a Array
+### 5. Remove Duplicate Elements in an Array
 
 ```javascript
 const arr = [10, 34, 78, 769, 10, 56, 65, 34, 78];
@@ -308,8 +309,7 @@ const arr = [10, 34, 78, 769, 10, 56, 65, 34, 78];
 const finalArr = (arr) => {
   arr = arr.sort();
 
-  const uniqueArr = [];
-  const duplicateArr = [];
+  const [uniqueArr, duplicateArr] = [[], []];
   let prev = arr[0];
   uniqueArr[0] = prev;
 
@@ -326,11 +326,55 @@ const finalArr = (arr) => {
 
     prev = value;
   }
-  
+
   console.log(duplicateArr)
 
   return uniqueArr.filter((el) => el !== undefined);
 };
 
 console.log(finalArr(arr));
+```
+
+### 6. Sort an Array in descending order
+
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const sortArr = (arr) => {
+  let temp;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+};
+
+console.log(sortArr(arr));
+```
+
+### 7. Sort an Array in ascending order
+
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const sortArr = (arr) => {
+  let temp;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+};
+
+console.log(sortArr(arr));
 ```
