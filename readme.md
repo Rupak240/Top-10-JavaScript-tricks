@@ -156,9 +156,11 @@ console.log(`${endAt - startAt} miliseconds took to execute.`);
 <br />
 
 ## Some more LIFE CHANGING JavaScript Tricks:
+
 ---
 
-#### ONE : 
+#### ONE :
+
 ```javascript
 console.log('Hello')
 
@@ -171,14 +173,15 @@ console.table({message: 'Hello')
 console.log('%c my message', 'color: blue')
 ```
 
-#### TWO : 
+#### TWO :
 
 ```javascript
-const favFood = 'burger'
-console.log({favFood})
+const favFood = "burger";
+console.log({ favFood });
 ```
 
-#### THREE : 
+#### THREE :
+
 ```javascript
 function getFullName({ firstName, lastName, middleName }) {
   return `${firstName} ${middleName} ${lastName}`;
@@ -189,17 +192,18 @@ console.log(
 );
 ```
 
-#### FOUR : 
+#### FOUR :
+
 ```javascript
 const arr = [11, 22, 33];
-arr.splice(1, 1);           // Deletes from the original array -- Risky
+arr.splice(1, 1); // Deletes from the original array -- Risky
 
-arr.slice(1, 1);            // Makes a new copy of that array
-const copyArr = [...arr];   // Makes a new copy of that array
+arr.slice(1, 1); // Makes a new copy of that array
+const copyArr = [...arr]; // Makes a new copy of that array
 console.log(copyArr);
 ```
 
-#### FIVE : 
+#### FIVE :
 
 ```javascript
 const obj = {
@@ -208,4 +212,53 @@ const obj = {
 };
 const copyObj = Object.assign({}, obj);
 console.log(copyObj);
+```
+
+## Array Tricks:
+
+---
+
+### 1. Second Largest Element in a Array
+
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const secondMaxEl = (arr) => {
+  let max = 0;
+  let secondMax = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      secondMax = max;
+      max = arr[i];
+    } else if (arr[i] > secondMax && arr[i] < max) {
+      secondMax = arr[i];
+    }
+  }
+  return secondMax;
+};
+
+console.log(secondMaxEl(arr));
+```
+
+### 2. Second Minimum Element in a Array
+
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const secondMinEl = (arr) => {
+  let min = 999999;
+  let secondMin = 999999;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      secondMin = min;
+      min = arr[i];
+    } else if (arr[i] < secondMin && arr[i] > min) {
+      secondMin = arr[i];
+    }
+  }
+  return secondMin;
+};
+
+console.log(secondMinEl(arr));
 ```

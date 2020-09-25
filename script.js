@@ -132,3 +132,43 @@ console.log(copyObj);
 
 // const userCopy = cloneDeep(user);
 // console.log(userCopy);
+
+// Second Largest Element in a Array
+// const arr = [100, 20, 47, 1000, 60, 900];
+
+// const secondMaxEl = (arr) => {
+//   let max = 0;
+//   let secondMax = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       secondMax = max;
+//       max = arr[i];
+//     } else if (arr[i] > secondMax && arr[i] < max) {
+//       secondMax = arr[i];
+//     }
+//   }
+//   return secondMax;
+// };
+
+// console.log(secondMaxEl(arr));
+
+// Second Minimum Element in a Array
+// const arr = [100, 20, 47, 1000, 60, 900];
+
+// const secondMinEl = (arr) => {
+//   let min = 999999;
+//   let secondMin = 999999;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       secondMin = min;
+//       min = arr[i];
+//     } else if (arr[i] < secondMin && arr[i] > min) {
+//       secondMin = arr[i];
+//     }
+//   }
+//   return secondMin;
+// };
+
+// console.log(secondMinEl(arr));
