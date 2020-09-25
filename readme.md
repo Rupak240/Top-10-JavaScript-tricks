@@ -216,9 +216,47 @@ console.log(copyObj);
 
 ## Array Tricks:
 
----
+### 1. Largest Element in a Array
 
-### 1. Second Largest Element in a Array
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const maxEl = (arr) => {
+  let el = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > el) {
+      el = arr[i];
+    }
+  }
+
+  return el;
+};
+
+console.log(maxEl(arr));
+```
+
+### 2. Smallest Element in a Array
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const minEl = (arr) => {
+  let el = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < el) {
+      el = arr[i];
+    }
+  }
+
+  return el;
+};
+
+console.log(minEl(arr));
+};
+```
+
+### 3. Second Largest Element in a Array
 
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
@@ -241,7 +279,7 @@ const secondMaxEl = (arr) => {
 console.log(secondMaxEl(arr));
 ```
 
-### 2. Second Minimum Element in a Array
+### 4. Second Smallest Element in a Array
 
 ```javascript
 const arr = [100, 20, 47, 1000, 60, 900];
