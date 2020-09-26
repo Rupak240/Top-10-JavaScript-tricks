@@ -378,3 +378,20 @@ const sortArr = (arr) => {
 
 console.log(sortArr(arr));
 ```
+
+### 8. Reverse an Array
+
+```javascript
+const arr = [100, 20, 47, 1000, 60, 900];
+
+const reverseArr = (arr) => {
+  let reversedArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArr.push(arr[i]);
+  }
+  return reversedArr;
+};
+
+console.log(reverseArr(arr));
+```
+
